@@ -111,11 +111,11 @@ void Init_1621(void)
 
 void draw_n(int n){
   if(n >= 0 && n < 10)
-    draw(0,0,0,num[n]);
+    draw(0,0,num[n],0);
   else if(n >= 10 && n < 100)
-    draw(0,0,num[(n /10 % 10)],num[(n% 10)]);
+    draw(0,num[(n /10 % 10)],num[(n% 10)],0);
   else if(n >= 100 && n < 1000)
-    draw(0,num[(n / 100 % 10)],num[(n /10 % 10)],num[(n% 10)]);
+    draw(num[(n / 100 % 10)],num[(n /10 % 10)],num[(n% 10)],0);
   else
     draw(num[(n / 1000 % 10)],num[(n / 100 % 10)],num[(n /10 % 10)],num[(n% 10)]);
 }
